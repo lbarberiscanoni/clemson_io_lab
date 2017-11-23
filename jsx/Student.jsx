@@ -7,18 +7,21 @@ class Student extends React.Component {
     }
 
     render() {
-        var stylesheet = {
-            width: "30rem"
-        };
 
         return(
-            <div className="card" style={ stylesheet }>
-                <img className="card-img-top img-thumbnail" src={ this.props.path } alt="Card image cap"></img>
-                <div className="card-body">
-                    <h4 className="card-title">{ this.props.name }</h4>
-                    <p className="card-text">{ this.props.description }</p>
+            <div className="row">
+                <div className="col-md-1"></div>
+                <div className="col-md-10">
+                    <div className="thumbnail">
+                        <img src={ this.props.path } alt="Card image cap"></img>
+                        <div className="caption">
+                            <h3>{ this.props.name }</h3>
+                            <p>{ this.props.description }</p>
+                        </div>
+                        <a className="btn btn-primary form-control" href={ this.props.cv } target="_blank">Curriculum Vitae</a>
+                    </div>
                 </div>
-                <button className="card-link btn btn-primary" href={ this.props.cv } target="_blank">Curriculum Vitae</button>
+                <div className="col-md-1"></div>
             </div>
         )
     }

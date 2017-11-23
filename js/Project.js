@@ -36,24 +36,24 @@ var Project = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                { className: "card" },
+                { className: "thumbnail" },
                 _react2.default.createElement(
                     "div",
-                    { className: "card-body" },
+                    { className: "caption" },
                     _react2.default.createElement(
                         "h3",
-                        { className: "card-title" },
+                        null,
                         this.props.title
                     ),
                     _react2.default.createElement(
                         "h4",
-                        { className: "card-subtitle text-muted" },
+                        { className: "text-muted" },
                         this.props.status,
                         " "
                     ),
                     _react2.default.createElement(
                         "p",
-                        { className: "card-text" },
+                        null,
                         this.props.content
                     )
                 )

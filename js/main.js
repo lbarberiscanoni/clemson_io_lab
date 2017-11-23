@@ -22,6 +22,14 @@ var _Student = require("./Student");
 
 var _Student2 = _interopRequireDefault(_Student);
 
+var _LeftBanner = require("./LeftBanner");
+
+var _LeftBanner2 = _interopRequireDefault(_LeftBanner);
+
+var _RightBanner = require("./RightBanner");
+
+var _RightBanner2 = _interopRequireDefault(_RightBanner);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39,7 +47,7 @@ var Hello = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Hello.__proto__ || Object.getPrototypeOf(Hello)).call(this, props));
 
         _this.state = {
-            location: "students"
+            location: "home"
         };
         return _this;
     }
@@ -55,22 +63,16 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement("div", { className: "col-md-3" }),
                         _react2.default.createElement(
-                            "div",
-                            { className: "col-md-6" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row" },
-                                "Assistant Professor of Industrial/Organizational Psychology at Clemson University"
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row" },
-                                "Director, Developing and Improving Globally Integrated Teamwork and Leadership (DIGITAL) Lab"
-                            )
+                            "h4",
+                            { className: "text-center" },
+                            "Assistant Professor of Industrial/Organizational Psychology at Clemson University"
                         ),
-                        _react2.default.createElement("div", { className: "col-md-3" })
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "text-center" },
+                            "Director, Developing and Improving Globally Integrated Teamwork and Leadership (DIGITAL) Lab"
+                        )
                     ),
                     _react2.default.createElement(
                         "div",
@@ -78,21 +80,7 @@ var Hello = function (_React$Component) {
                         _react2.default.createElement(
                             "div",
                             { className: "col-md-3" },
-                            _react2.default.createElement(
-                                "h2",
-                                null,
-                                "Fall 2018 News"
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "Dr. Shuffler will be accepting MS and PhD students for the Fall of 2018."
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "If you have questions about program admission requirements, please visit the Clemson Psychology Department website for more details."
-                            )
+                            _react2.default.createElement(_LeftBanner2.default, null)
                         ),
                         _react2.default.createElement(
                             "div",
@@ -100,43 +88,51 @@ var Hello = function (_React$Component) {
                             _react2.default.createElement(
                                 "div",
                                 { className: "row" },
-                                "Dr. Marissa Shuffler is an assistant professor of I/O Psychology at Clemson University whose research interests primarily reside in understanding and improving the work of teams and leaders operating in complex environments."
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "lead" },
+                                    "Dr. Marissa Shuffler is an assistant professor of I/O Psychology at Clemson University whose research interests primarily reside in understanding and improving the work of teams and leaders operating in complex environments. "
+                                )
                             ),
                             _react2.default.createElement(
                                 "div",
                                 { className: "row" },
-                                "Current research projects funded by NASA and the National Science Foundation involve investigating:",
                                 _react2.default.createElement(
-                                    "ol",
+                                    "h5",
                                     null,
+                                    "Current research projects funded by NASA and the National Science Foundation involve investigating:"
+                                ),
+                                _react2.default.createElement(
+                                    "ul",
+                                    { className: "list-group" },
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Virtual and physically distributed teams "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Multicultural teams "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Collective/shared leadership "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Multiteam systems "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Team development intervention "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Director, Developing and Improving Globally Integrated Teamwork and Leadership (DIGITAL) Lab "
                                     )
                                 )
@@ -148,15 +144,14 @@ var Hello = function (_React$Component) {
                                     "a",
                                     { href: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NjNiYzNhZGEwY2FjZWQ3ZQ", className: "btn btn-primary", target: "_blank" },
                                     "Curriculum Vitae"
-                                ),
-                                _react2.default.createElement(
-                                    "address",
-                                    null,
-                                    "mshuffl@clemson.edu"
                                 )
                             )
                         ),
-                        _react2.default.createElement("div", { className: "col-md-3" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }if (this.state.location == "lab") {
@@ -167,10 +162,14 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement("div", { className: "col-md-2" }),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-md-8" },
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_LeftBanner2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-6" },
                             _react2.default.createElement(
                                 "p",
                                 null,
@@ -197,7 +196,11 @@ var Hello = function (_React$Component) {
                                 "Undergraduates in the CI did a substantial amount of literature review. Undergraduates were taught how to search large databases for specific terms and to locate pertinent information. This literature search is paving the way for papers that are to be submitted by the CI leaders."
                             )
                         ),
-                        _react2.default.createElement("div", { className: "col-md-2" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }if (this.state.location == "bio") {
@@ -208,10 +211,14 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement("div", { className: "col-md-2" }),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-md-8" },
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_LeftBanner2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-6" },
                             _react2.default.createElement(
                                 "p",
                                 null,
@@ -228,7 +235,11 @@ var Hello = function (_React$Component) {
                                 "Additionally, Dr. Shuffler has conducted interdisciplinary quantitative and qualitative research to assess training and development needs for military and civilian populations, including the design, implementation, and analysis of both field and laboratory experimental studies. Dr. Shuffler conducted this and similar research for a range of government, military, and other organizations, including ICF International, the U.S. Army Research Institute, the Department of Labor, the Center for Army Leadership, the Department of Homeland Security, the U.S. Air Force, TIAA-CREF, and the Four Seasons Hotel. Her work to date includes over 30 publications and 60 presentations. "
                             )
                         ),
-                        _react2.default.createElement("div", { className: "col-md-2" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }if (this.state.location == "research") {
@@ -239,15 +250,23 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement("div", { className: "col-md-2" }),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-md-8" },
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_LeftBanner2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-6" },
                             _react2.default.createElement(_Project2.default, { title: "Exploring leadership and followership in the context of autonomous long duration space exploration missions", status: "Wrapping up in Fall 2017", content: "This NASA funded research effort is a joint collaboration with the University of Central Florida (Dr. Shawn Burke, PI, & Dr. Eduardo Salas, Co-PI). We are conducting three major research efforts with this project, including a lab study utilizing a computer simulation game to examine the effects of autonomy and distribution on leadership structure; a qualitative study of high risk teams (e.g., exploration teams, mountain climbing expeditions, astronaut crews, boat racing teams) in order to assess critical leadership behaviors in these types of environments; and a field study using a NASA created testbed to assess leadership structure issues in a simulated NASA mission." }),
                             _react2.default.createElement(_Project2.default, { title: "Leadership development program assessment, design, and evaluation with Greenville Health System", status: "Ongoing", content: "Leadership is a critical component to effective medical care, across multiple levels of healtcare organizations. Working with GHS, we will be examining current leadership development needs in healthcare environments, particularly at the team unit of analysis. We will also be taking a closer look at existing programs to determine what might make certain types of leader training and development programs more effective than others." }),
                             _react2.default.createElement(_Project2.default, { title: "NSF CAREER: Teamwork Profiles as a Means for Determining Appropriate Team Development Interventions", status: "Ongoing", content: "This new project currently involves conducting interviews, focus groups, and observations of teams in healthcare, engineering design, and scientific research settings. We are working with Clemson's Creative Inquiry program as well as Greenville Health System to better understand the factors most critical to teams in these environments. Through qualitative data collection and analysis, as well as the analysis of archival data we have previously collected as a lab in these environments, we will produce a set of key teamwork factors for each setting that can subsequently be measured to predict teamwork profiles--the patterns of teamwork factors that shape team effectiveness in these settings.Once we identify these patterns with profiles, we will start matching them with appropriate team development interventions (TDIs) that should help maximize team outcomes." })
                         ),
-                        _react2.default.createElement("div", { className: "col-md-2" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }if (this.state.location == "students") {
@@ -258,9 +277,23 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement(_Student2.default, { path: "assets/billy.jpg", name: "William S. Kramer", description: "William is a doctoral candidate in the I/O Psychology program. He has co-authored over ten peer reviewed publications and book chapters and over twenty conference presentations. Throughout his academic career he has been the student lead in charge of managing a variety of different grants and contracts across a number of contexts (e.g. NASA, ARL). His research interests include culture, teams, leadership, and adaptation to changes in situational context.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6Njg5ZjY1NGMwY2VjNWVlNA" }),
-                        _react2.default.createElement(_Student2.default, { path: "assets/dana.png", name: "Dana Verhoeven", description: "Dana is a Ph.D. student in the Industrial/Organization Psychology program. She is originally from Raleigh, NC and graduated from the University of Central Florida with a B.S. in psychology and minors in both business administration and leadership studies. Her research interests include teams, leadership, and training.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NGQ2NjU2OThkOTcxNjVkMQ" }),
-                        _react2.default.createElement(_Student2.default, { path: "assets/nastassia.jpg", name: "Nastassia Savage", description: "Nastassia is a Ph.D. student in the Industrial Organizational Psychology program. She came to Clemson University after working on her Masters in Industrial and Organizational Psychology at the University of Central Florida under Dr. Eduardo Salas. Her research interests include teams,interactional justice, leadership, and organizational health psychology.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NWU5YzRlZmY4NTBkNTg5OQ" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_LeftBanner2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-6" },
+                            _react2.default.createElement(_Student2.default, { path: "assets/billy.jpg", name: "William S. Kramer", description: "William is a doctoral candidate in the I/O Psychology program. He has co-authored over ten peer reviewed publications and book chapters and over twenty conference presentations. Throughout his academic career he has been the student lead in charge of managing a variety of different grants and contracts across a number of contexts (e.g. NASA, ARL). His research interests include culture, teams, leadership, and adaptation to changes in situational context.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6Njg5ZjY1NGMwY2VjNWVlNA" }),
+                            _react2.default.createElement(_Student2.default, { path: "assets/dana.png", name: "Dana Verhoeven", description: "Dana is a Ph.D. student in the Industrial/Organization Psychology program. She is originally from Raleigh, NC and graduated from the University of Central Florida with a B.S. in psychology and minors in both business administration and leadership studies. Her research interests include teams, leadership, and training.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NGQ2NjU2OThkOTcxNjVkMQ" }),
+                            _react2.default.createElement(_Student2.default, { path: "assets/nastassia.jpg", name: "Nastassia Savage", description: "Nastassia is a Ph.D. student in the Industrial Organizational Psychology program. She came to Clemson University after working on her Masters in Industrial and Organizational Psychology at the University of Central Florida under Dr. Eduardo Salas. Her research interests include teams,interactional justice, leadership, and organizational health psychology.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NWU5YzRlZmY4NTBkNTg5OQ" })
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }

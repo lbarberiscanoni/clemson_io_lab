@@ -8,11 +8,11 @@ class Project extends React.Component {
 
     render() {
         return(
-            <div className="card">
-                <div className="card-body">
-                    <h3 className="card-title">{ this.props.title }</h3>
-                    <h4 className="card-subtitle text-muted">{ this.props.status } </h4>
-                    <p className="card-text">{ this.props.content }</p>
+            <div className="thumbnail">
+                <div className="caption">
+                    <h3>{ this.props.title }</h3>
+                    <h4 className="text-muted">{ this.props.status } </h4>
+                    <p>{ this.props.content }</p>
                 </div>
             </div>
         )

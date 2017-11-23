@@ -34,33 +34,40 @@ var Student = function (_React$Component) {
     _createClass(Student, [{
         key: "render",
         value: function render() {
-            var stylesheet = {
-                width: "30rem"
-            };
 
             return _react2.default.createElement(
                 "div",
-                { className: "card", style: stylesheet },
-                _react2.default.createElement("img", { className: "card-img-top img-thumbnail", src: this.props.path, alt: "Card image cap" }),
+                { className: "row" },
+                _react2.default.createElement("div", { className: "col-md-1" }),
                 _react2.default.createElement(
                     "div",
-                    { className: "card-body" },
+                    { className: "col-md-10" },
                     _react2.default.createElement(
-                        "h4",
-                        { className: "card-title" },
-                        this.props.name
-                    ),
-                    _react2.default.createElement(
-                        "p",
-                        { className: "card-text" },
-                        this.props.description
+                        "div",
+                        { className: "thumbnail" },
+                        _react2.default.createElement("img", { src: this.props.path, alt: "Card image cap" }),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "caption" },
+                            _react2.default.createElement(
+                                "h3",
+                                null,
+                                this.props.name
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                null,
+                                this.props.description
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "a",
+                            { className: "btn btn-primary form-control", href: this.props.cv, target: "_blank" },
+                            "Curriculum Vitae"
+                        )
                     )
                 ),
-                _react2.default.createElement(
-                    "button",
-                    { className: "card-link btn btn-primary", href: this.props.cv, target: "_blank" },
-                    "Curriculum Vitae"
-                )
+                _react2.default.createElement("div", { className: "col-md-1" })
             );
         }
     }]);

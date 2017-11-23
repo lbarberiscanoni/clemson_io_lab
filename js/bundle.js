@@ -23,6 +23,80 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var LeftBanner = function (_React$Component) {
+    _inherits(LeftBanner, _React$Component);
+
+    function LeftBanner(props) {
+        _classCallCheck(this, LeftBanner);
+
+        return _possibleConstructorReturn(this, (LeftBanner.__proto__ || Object.getPrototypeOf(LeftBanner)).call(this, props));
+    }
+
+    _createClass(LeftBanner, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    "Fall 2018 News"
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "Dr. Shuffler will be accepting MS and PhD students for the Fall of 2018."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "If you have questions about program admission requirements, please visit the ",
+                    _react2.default.createElement(
+                        "a",
+                        { href: "https://www.clemson.edu/cbshs/departments/psychology/" },
+                        " Clemson Psychology Department website "
+                    ),
+                    " for more details."
+                ),
+                _react2.default.createElement(
+                    "a",
+                    { href: "mailto:mshuffl@clemson.edu", className: "text-primary" },
+                    "mshuffl@clemson.edu"
+                )
+            );
+        }
+    }]);
+
+    return LeftBanner;
+}(_react2.default.Component);
+
+exports.default = LeftBanner;
+},{"react":31,"react-dom":28}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require("react-dom");
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var Project = function (_React$Component) {
     _inherits(Project, _React$Component);
 
@@ -37,24 +111,24 @@ var Project = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                { className: "card" },
+                { className: "thumbnail" },
                 _react2.default.createElement(
                     "div",
-                    { className: "card-body" },
+                    { className: "caption" },
                     _react2.default.createElement(
                         "h3",
-                        { className: "card-title" },
+                        null,
                         this.props.title
                     ),
                     _react2.default.createElement(
                         "h4",
-                        { className: "card-subtitle text-muted" },
+                        { className: "text-muted" },
                         this.props.status,
                         " "
                     ),
                     _react2.default.createElement(
                         "p",
-                        { className: "card-text" },
+                        null,
                         this.props.content
                     )
                 )
@@ -66,7 +140,78 @@ var Project = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Project;
-},{"react":29,"react-dom":26}],2:[function(require,module,exports){
+},{"react":31,"react-dom":28}],3:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require("react-dom");
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RightBanner = function (_React$Component) {
+    _inherits(RightBanner, _React$Component);
+
+    function RightBanner(props) {
+        _classCallCheck(this, RightBanner);
+
+        return _possibleConstructorReturn(this, (RightBanner.__proto__ || Object.getPrototypeOf(RightBanner)).call(this, props));
+    }
+
+    _createClass(RightBanner, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement(
+                    "a",
+                    { href: "https://www.clemson.edu/cbshs/departments/psychology/", target: "_blank" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "Clemson Psychology Department"
+                    )
+                ),
+                _react2.default.createElement(
+                    "a",
+                    { href: "http://newsstand.clemson.edu/mediarelations/psychology-researcher-to-use-grant-to-improve-teamwork-across-disciplines/", target: "_blank" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "NSF CAREER Grant Awarded to DIGITAL Lab!"
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "embed-responsive embed-responsive-4by3" },
+                    _react2.default.createElement("iframe", { className: "embed-responsive-item", src: "assets/research_rock_stars.mp4" })
+                )
+            );
+        }
+    }]);
+
+    return RightBanner;
+}(_react2.default.Component);
+
+exports.default = RightBanner;
+},{"react":31,"react-dom":28}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -103,33 +248,40 @@ var Student = function (_React$Component) {
     _createClass(Student, [{
         key: "render",
         value: function render() {
-            var stylesheet = {
-                width: "30rem"
-            };
 
             return _react2.default.createElement(
                 "div",
-                { className: "card", style: stylesheet },
-                _react2.default.createElement("img", { className: "card-img-top img-thumbnail", src: this.props.path, alt: "Card image cap" }),
+                { className: "row" },
+                _react2.default.createElement("div", { className: "col-md-1" }),
                 _react2.default.createElement(
                     "div",
-                    { className: "card-body" },
+                    { className: "col-md-10" },
                     _react2.default.createElement(
-                        "h4",
-                        { className: "card-title" },
-                        this.props.name
-                    ),
-                    _react2.default.createElement(
-                        "p",
-                        { className: "card-text" },
-                        this.props.description
+                        "div",
+                        { className: "thumbnail" },
+                        _react2.default.createElement("img", { src: this.props.path, alt: "Card image cap" }),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "caption" },
+                            _react2.default.createElement(
+                                "h3",
+                                null,
+                                this.props.name
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                null,
+                                this.props.description
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "a",
+                            { className: "btn btn-primary form-control", href: this.props.cv, target: "_blank" },
+                            "Curriculum Vitae"
+                        )
                     )
                 ),
-                _react2.default.createElement(
-                    "button",
-                    { className: "card-link btn btn-primary", href: this.props.cv, target: "_blank" },
-                    "Curriculum Vitae"
-                )
+                _react2.default.createElement("div", { className: "col-md-1" })
             );
         }
     }]);
@@ -138,7 +290,7 @@ var Student = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Student;
-},{"react":29,"react-dom":26}],3:[function(require,module,exports){
+},{"react":31,"react-dom":28}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -191,7 +343,7 @@ var Title = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Title;
-},{"react":29,"react-dom":26}],4:[function(require,module,exports){
+},{"react":31,"react-dom":28}],6:[function(require,module,exports){
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -216,6 +368,14 @@ var _Student = require("./Student");
 
 var _Student2 = _interopRequireDefault(_Student);
 
+var _LeftBanner = require("./LeftBanner");
+
+var _LeftBanner2 = _interopRequireDefault(_LeftBanner);
+
+var _RightBanner = require("./RightBanner");
+
+var _RightBanner2 = _interopRequireDefault(_RightBanner);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -233,7 +393,7 @@ var Hello = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Hello.__proto__ || Object.getPrototypeOf(Hello)).call(this, props));
 
         _this.state = {
-            location: "students"
+            location: "home"
         };
         return _this;
     }
@@ -249,22 +409,16 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement("div", { className: "col-md-3" }),
                         _react2.default.createElement(
-                            "div",
-                            { className: "col-md-6" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row" },
-                                "Assistant Professor of Industrial/Organizational Psychology at Clemson University"
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "row" },
-                                "Director, Developing and Improving Globally Integrated Teamwork and Leadership (DIGITAL) Lab"
-                            )
+                            "h4",
+                            { className: "text-center" },
+                            "Assistant Professor of Industrial/Organizational Psychology at Clemson University"
                         ),
-                        _react2.default.createElement("div", { className: "col-md-3" })
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "text-center" },
+                            "Director, Developing and Improving Globally Integrated Teamwork and Leadership (DIGITAL) Lab"
+                        )
                     ),
                     _react2.default.createElement(
                         "div",
@@ -272,21 +426,7 @@ var Hello = function (_React$Component) {
                         _react2.default.createElement(
                             "div",
                             { className: "col-md-3" },
-                            _react2.default.createElement(
-                                "h2",
-                                null,
-                                "Fall 2018 News"
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "Dr. Shuffler will be accepting MS and PhD students for the Fall of 2018."
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "If you have questions about program admission requirements, please visit the Clemson Psychology Department website for more details."
-                            )
+                            _react2.default.createElement(_LeftBanner2.default, null)
                         ),
                         _react2.default.createElement(
                             "div",
@@ -294,43 +434,51 @@ var Hello = function (_React$Component) {
                             _react2.default.createElement(
                                 "div",
                                 { className: "row" },
-                                "Dr. Marissa Shuffler is an assistant professor of I/O Psychology at Clemson University whose research interests primarily reside in understanding and improving the work of teams and leaders operating in complex environments."
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "lead" },
+                                    "Dr. Marissa Shuffler is an assistant professor of I/O Psychology at Clemson University whose research interests primarily reside in understanding and improving the work of teams and leaders operating in complex environments. "
+                                )
                             ),
                             _react2.default.createElement(
                                 "div",
                                 { className: "row" },
-                                "Current research projects funded by NASA and the National Science Foundation involve investigating:",
                                 _react2.default.createElement(
-                                    "ol",
+                                    "h5",
                                     null,
+                                    "Current research projects funded by NASA and the National Science Foundation involve investigating:"
+                                ),
+                                _react2.default.createElement(
+                                    "ul",
+                                    { className: "list-group" },
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Virtual and physically distributed teams "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Multicultural teams "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Collective/shared leadership "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Multiteam systems "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Team development intervention "
                                     ),
                                     _react2.default.createElement(
                                         "li",
-                                        null,
+                                        { className: "list-group-item" },
                                         " Director, Developing and Improving Globally Integrated Teamwork and Leadership (DIGITAL) Lab "
                                     )
                                 )
@@ -342,15 +490,14 @@ var Hello = function (_React$Component) {
                                     "a",
                                     { href: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NjNiYzNhZGEwY2FjZWQ3ZQ", className: "btn btn-primary", target: "_blank" },
                                     "Curriculum Vitae"
-                                ),
-                                _react2.default.createElement(
-                                    "address",
-                                    null,
-                                    "mshuffl@clemson.edu"
                                 )
                             )
                         ),
-                        _react2.default.createElement("div", { className: "col-md-3" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }if (this.state.location == "lab") {
@@ -361,10 +508,14 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement("div", { className: "col-md-2" }),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-md-8" },
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_LeftBanner2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-6" },
                             _react2.default.createElement(
                                 "p",
                                 null,
@@ -391,7 +542,11 @@ var Hello = function (_React$Component) {
                                 "Undergraduates in the CI did a substantial amount of literature review. Undergraduates were taught how to search large databases for specific terms and to locate pertinent information. This literature search is paving the way for papers that are to be submitted by the CI leaders."
                             )
                         ),
-                        _react2.default.createElement("div", { className: "col-md-2" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }if (this.state.location == "bio") {
@@ -402,10 +557,14 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement("div", { className: "col-md-2" }),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-md-8" },
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_LeftBanner2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-6" },
                             _react2.default.createElement(
                                 "p",
                                 null,
@@ -422,7 +581,11 @@ var Hello = function (_React$Component) {
                                 "Additionally, Dr. Shuffler has conducted interdisciplinary quantitative and qualitative research to assess training and development needs for military and civilian populations, including the design, implementation, and analysis of both field and laboratory experimental studies. Dr. Shuffler conducted this and similar research for a range of government, military, and other organizations, including ICF International, the U.S. Army Research Institute, the Department of Labor, the Center for Army Leadership, the Department of Homeland Security, the U.S. Air Force, TIAA-CREF, and the Four Seasons Hotel. Her work to date includes over 30 publications and 60 presentations. "
                             )
                         ),
-                        _react2.default.createElement("div", { className: "col-md-2" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }if (this.state.location == "research") {
@@ -433,15 +596,23 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement("div", { className: "col-md-2" }),
                         _react2.default.createElement(
                             "div",
-                            { className: "col-md-8" },
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_LeftBanner2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-6" },
                             _react2.default.createElement(_Project2.default, { title: "Exploring leadership and followership in the context of autonomous long duration space exploration missions", status: "Wrapping up in Fall 2017", content: "This NASA funded research effort is a joint collaboration with the University of Central Florida (Dr. Shawn Burke, PI, & Dr. Eduardo Salas, Co-PI). We are conducting three major research efforts with this project, including a lab study utilizing a computer simulation game to examine the effects of autonomy and distribution on leadership structure; a qualitative study of high risk teams (e.g., exploration teams, mountain climbing expeditions, astronaut crews, boat racing teams) in order to assess critical leadership behaviors in these types of environments; and a field study using a NASA created testbed to assess leadership structure issues in a simulated NASA mission." }),
                             _react2.default.createElement(_Project2.default, { title: "Leadership development program assessment, design, and evaluation with Greenville Health System", status: "Ongoing", content: "Leadership is a critical component to effective medical care, across multiple levels of healtcare organizations. Working with GHS, we will be examining current leadership development needs in healthcare environments, particularly at the team unit of analysis. We will also be taking a closer look at existing programs to determine what might make certain types of leader training and development programs more effective than others." }),
                             _react2.default.createElement(_Project2.default, { title: "NSF CAREER: Teamwork Profiles as a Means for Determining Appropriate Team Development Interventions", status: "Ongoing", content: "This new project currently involves conducting interviews, focus groups, and observations of teams in healthcare, engineering design, and scientific research settings. We are working with Clemson's Creative Inquiry program as well as Greenville Health System to better understand the factors most critical to teams in these environments. Through qualitative data collection and analysis, as well as the analysis of archival data we have previously collected as a lab in these environments, we will produce a set of key teamwork factors for each setting that can subsequently be measured to predict teamwork profiles--the patterns of teamwork factors that shape team effectiveness in these settings.Once we identify these patterns with profiles, we will start matching them with appropriate team development interventions (TDIs) that should help maximize team outcomes." })
                         ),
-                        _react2.default.createElement("div", { className: "col-md-2" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }if (this.state.location == "students") {
@@ -452,9 +623,23 @@ var Hello = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement(_Student2.default, { path: "assets/billy.jpg", name: "William S. Kramer", description: "William is a doctoral candidate in the I/O Psychology program. He has co-authored over ten peer reviewed publications and book chapters and over twenty conference presentations. Throughout his academic career he has been the student lead in charge of managing a variety of different grants and contracts across a number of contexts (e.g. NASA, ARL). His research interests include culture, teams, leadership, and adaptation to changes in situational context.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6Njg5ZjY1NGMwY2VjNWVlNA" }),
-                        _react2.default.createElement(_Student2.default, { path: "assets/dana.png", name: "Dana Verhoeven", description: "Dana is a Ph.D. student in the Industrial/Organization Psychology program. She is originally from Raleigh, NC and graduated from the University of Central Florida with a B.S. in psychology and minors in both business administration and leadership studies. Her research interests include teams, leadership, and training.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NGQ2NjU2OThkOTcxNjVkMQ" }),
-                        _react2.default.createElement(_Student2.default, { path: "assets/nastassia.jpg", name: "Nastassia Savage", description: "Nastassia is a Ph.D. student in the Industrial Organizational Psychology program. She came to Clemson University after working on her Masters in Industrial and Organizational Psychology at the University of Central Florida under Dr. Eduardo Salas. Her research interests include teams,interactional justice, leadership, and organizational health psychology.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NWU5YzRlZmY4NTBkNTg5OQ" })
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_LeftBanner2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-6" },
+                            _react2.default.createElement(_Student2.default, { path: "assets/billy.jpg", name: "William S. Kramer", description: "William is a doctoral candidate in the I/O Psychology program. He has co-authored over ten peer reviewed publications and book chapters and over twenty conference presentations. Throughout his academic career he has been the student lead in charge of managing a variety of different grants and contracts across a number of contexts (e.g. NASA, ARL). His research interests include culture, teams, leadership, and adaptation to changes in situational context.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6Njg5ZjY1NGMwY2VjNWVlNA" }),
+                            _react2.default.createElement(_Student2.default, { path: "assets/dana.png", name: "Dana Verhoeven", description: "Dana is a Ph.D. student in the Industrial/Organization Psychology program. She is originally from Raleigh, NC and graduated from the University of Central Florida with a B.S. in psychology and minors in both business administration and leadership studies. Her research interests include teams, leadership, and training.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NGQ2NjU2OThkOTcxNjVkMQ" }),
+                            _react2.default.createElement(_Student2.default, { path: "assets/nastassia.jpg", name: "Nastassia Savage", description: "Nastassia is a Ph.D. student in the Industrial Organizational Psychology program. She came to Clemson University after working on her Masters in Industrial and Organizational Psychology at the University of Central Florida under Dr. Eduardo Salas. Her research interests include teams,interactional justice, leadership, and organizational health psychology.", cv: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtYXJpc3Nhc2h1ZmZsZXJ8Z3g6NWU5YzRlZmY4NTBkNTg5OQ" })
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-3" },
+                            _react2.default.createElement(_RightBanner2.default, null)
+                        )
                     )
                 );
             }
@@ -465,7 +650,7 @@ var Hello = function (_React$Component) {
 }(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(Hello, null), document.getElementById("main"));
-},{"./Project":1,"./Student":2,"./Title":3,"react":29,"react-dom":26}],5:[function(require,module,exports){
+},{"./LeftBanner":1,"./Project":2,"./RightBanner":3,"./Student":4,"./Title":5,"react":31,"react-dom":28}],7:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -542,7 +727,7 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
-},{"./emptyFunction":10,"_process":30}],6:[function(require,module,exports){
+},{"./emptyFunction":12,"_process":32}],8:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -576,7 +761,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],7:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 /**
@@ -606,7 +791,7 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-},{}],8:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -644,7 +829,7 @@ function camelizeStyleName(string) {
 }
 
 module.exports = camelizeStyleName;
-},{"./camelize":7}],9:[function(require,module,exports){
+},{"./camelize":9}],11:[function(require,module,exports){
 'use strict';
 
 /**
@@ -682,7 +867,7 @@ function containsNode(outerNode, innerNode) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":18}],10:[function(require,module,exports){
+},{"./isTextNode":20}],12:[function(require,module,exports){
 "use strict";
 
 /**
@@ -719,7 +904,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -739,7 +924,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
-},{"_process":30}],12:[function(require,module,exports){
+},{"_process":32}],14:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -764,7 +949,7 @@ function focusNode(node) {
 }
 
 module.exports = focusNode;
-},{}],13:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 'use strict';
 
 /**
@@ -801,7 +986,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-},{}],14:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 'use strict';
 
 /**
@@ -832,7 +1017,7 @@ function hyphenate(string) {
 }
 
 module.exports = hyphenate;
-},{}],15:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -869,7 +1054,7 @@ function hyphenateStyleName(string) {
 }
 
 module.exports = hyphenateStyleName;
-},{"./hyphenate":14}],16:[function(require,module,exports){
+},{"./hyphenate":16}],18:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -925,7 +1110,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":30}],17:[function(require,module,exports){
+},{"_process":32}],19:[function(require,module,exports){
 'use strict';
 
 /**
@@ -948,7 +1133,7 @@ function isNode(object) {
 }
 
 module.exports = isNode;
-},{}],18:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 /**
@@ -971,7 +1156,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":17}],19:[function(require,module,exports){
+},{"./isNode":19}],21:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1037,7 +1222,7 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
-},{}],20:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -1102,7 +1287,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
-},{"./emptyFunction":10,"_process":30}],21:[function(require,module,exports){
+},{"./emptyFunction":12,"_process":32}],23:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -1194,7 +1379,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],22:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -1257,7 +1442,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":23,"_process":30,"fbjs/lib/invariant":16,"fbjs/lib/warning":20}],23:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":25,"_process":32,"fbjs/lib/invariant":18,"fbjs/lib/warning":22}],25:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1271,7 +1456,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],24:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 (function (process){
 /** @license React v16.1.1
  * react-dom.development.js
@@ -16675,7 +16860,7 @@ module.exports = reactDom;
 }
 
 }).call(this,require('_process'))
-},{"_process":30,"fbjs/lib/EventListener":5,"fbjs/lib/ExecutionEnvironment":6,"fbjs/lib/camelizeStyleName":8,"fbjs/lib/containsNode":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/focusNode":12,"fbjs/lib/getActiveElement":13,"fbjs/lib/hyphenateStyleName":15,"fbjs/lib/invariant":16,"fbjs/lib/shallowEqual":19,"fbjs/lib/warning":20,"object-assign":21,"prop-types/checkPropTypes":22,"react":29}],25:[function(require,module,exports){
+},{"_process":32,"fbjs/lib/EventListener":7,"fbjs/lib/ExecutionEnvironment":8,"fbjs/lib/camelizeStyleName":10,"fbjs/lib/containsNode":11,"fbjs/lib/emptyFunction":12,"fbjs/lib/emptyObject":13,"fbjs/lib/focusNode":14,"fbjs/lib/getActiveElement":15,"fbjs/lib/hyphenateStyleName":17,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":21,"fbjs/lib/warning":22,"object-assign":23,"prop-types/checkPropTypes":24,"react":31}],27:[function(require,module,exports){
 /** @license React v16.1.1
  * react-dom.production.min.js
  *
@@ -16904,7 +17089,7 @@ var Og={createPortal:Mg,findDOMNode:function(a){if(null==a)return null;if(1===a.
 D("40");return a._reactRootContainer?(Z.unbatchedUpdates(function(){Lg(null,null,a,!1,function(){a._reactRootContainer=null})}),!0):!1},unstable_createPortal:Mg,unstable_batchedUpdates:tc,unstable_deferredUpdates:Z.deferredUpdates,flushSync:Z.flushSync,__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{EventPluginHub:nb,EventPluginRegistry:Ua,EventPropagators:Cb,ReactControlledComponent:qc,ReactDOMComponentTree:tb,ReactDOMEventListener:td}};
 Z.injectIntoDevTools({findFiberByHostInstance:qb,bundleType:0,version:"16.1.1",rendererPackageName:"react-dom"});var Pg=Object.freeze({default:Og}),Qg=Pg&&Og||Pg;module.exports=Qg["default"]?Qg["default"]:Qg;
 
-},{"fbjs/lib/EventListener":5,"fbjs/lib/ExecutionEnvironment":6,"fbjs/lib/containsNode":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/focusNode":12,"fbjs/lib/getActiveElement":13,"fbjs/lib/shallowEqual":19,"object-assign":21,"react":29}],26:[function(require,module,exports){
+},{"fbjs/lib/EventListener":7,"fbjs/lib/ExecutionEnvironment":8,"fbjs/lib/containsNode":11,"fbjs/lib/emptyFunction":12,"fbjs/lib/emptyObject":13,"fbjs/lib/focusNode":14,"fbjs/lib/getActiveElement":15,"fbjs/lib/shallowEqual":21,"object-assign":23,"react":31}],28:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -16946,7 +17131,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react-dom.development.js":24,"./cjs/react-dom.production.min.js":25,"_process":30}],27:[function(require,module,exports){
+},{"./cjs/react-dom.development.js":26,"./cjs/react-dom.production.min.js":27,"_process":32}],29:[function(require,module,exports){
 (function (process){
 /** @license React v16.1.1
  * react.development.js
@@ -18293,7 +18478,7 @@ module.exports = react;
 }
 
 }).call(this,require('_process'))
-},{"_process":30,"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":16,"fbjs/lib/warning":20,"object-assign":21,"prop-types/checkPropTypes":22}],28:[function(require,module,exports){
+},{"_process":32,"fbjs/lib/emptyFunction":12,"fbjs/lib/emptyObject":13,"fbjs/lib/invariant":18,"fbjs/lib/warning":22,"object-assign":23,"prop-types/checkPropTypes":24}],30:[function(require,module,exports){
 /** @license React v16.1.1
  * react.production.min.js
  *
@@ -18317,7 +18502,7 @@ var R={Children:{map:function(a,b,e){if(null==a)return a;var d=[];Q(a,d,null,b,e
 k=a._owner;if(null!=b){void 0!==b.ref&&(h=b.ref,k=z.current);void 0!==b.key&&(c=""+b.key);if(a.type&&a.type.defaultProps)var f=a.type.defaultProps;for(g in b)A.call(b,g)&&!C.hasOwnProperty(g)&&(d[g]=void 0===b[g]&&void 0!==f?f[g]:b[g])}var g=arguments.length-2;if(1===g)d.children=e;else if(1<g){f=Array(g);for(var l=0;l<g;l++)f[l]=arguments[l+2];d.children=f}return{$$typeof:B,type:a.type,key:c,ref:h,props:d,_owner:k}},createFactory:function(a){var b=D.bind(null,a);b.type=a;return b},isValidElement:E,
 version:"16.1.1",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurrentOwner:z,assign:m}},S=Object.freeze({default:R}),T=S&&R||S;module.exports=T["default"]?T["default"]:T;
 
-},{"fbjs/lib/emptyFunction":10,"fbjs/lib/emptyObject":11,"object-assign":21}],29:[function(require,module,exports){
+},{"fbjs/lib/emptyFunction":12,"fbjs/lib/emptyObject":13,"object-assign":23}],31:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -18328,7 +18513,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react.development.js":27,"./cjs/react.production.min.js":28,"_process":30}],30:[function(require,module,exports){
+},{"./cjs/react.development.js":29,"./cjs/react.production.min.js":30,"_process":32}],32:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -18514,4 +18699,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[4]);
+},{}]},{},[6]);
