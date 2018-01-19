@@ -34,6 +34,18 @@ var _NavBar = require("./NavBar");
 
 var _NavBar2 = _interopRequireDefault(_NavBar);
 
+var _Widget = require("./Widget");
+
+var _Widget2 = _interopRequireDefault(_Widget);
+
+var _Form = require("./Form");
+
+var _Form2 = _interopRequireDefault(_Form);
+
+var _Collaborator = require("./Collaborator");
+
+var _Collaborator2 = _interopRequireDefault(_Collaborator);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -163,6 +175,39 @@ var Hello = function (_React$Component) {
                                 { className: "col-md-3" },
                                 _react2.default.createElement(_RightBanner2.default, null)
                             )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement("div", { className: "col-md-1" }),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-3" },
+                                _react2.default.createElement(
+                                    "h3",
+                                    null,
+                                    "Our Blog"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-4" },
+                                _react2.default.createElement(
+                                    "h3",
+                                    null,
+                                    "Papers We are Reading"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-3" },
+                                _react2.default.createElement(
+                                    "h3",
+                                    null,
+                                    "Our YouTube Channel"
+                                )
+                            ),
+                            _react2.default.createElement("div", { className: "col-md-1" })
                         )
                     );
                 case "lab":
@@ -311,6 +356,69 @@ var Hello = function (_React$Component) {
                             )
                         )
                     );
+                case "collaborators":
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "container" },
+                        _react2.default.createElement(_NavBar2.default, { navigate: this.navigate.bind(this) }),
+                        _react2.default.createElement(_Title2.default, { text: "Collaborators and Affiliate Researchers" }),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-3" },
+                                _react2.default.createElement(_LeftBanner2.default, null)
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-6" },
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    "We love to collaborate with other hard working and smart people who are researching impactful problems in human factors, industrial psychology, and industrial organizations"
+                                ),
+                                _react2.default.createElement(_Collaborator2.default, { author: "Lorenzo Barberis Canonico", projectName: "Stable Marriages in Healthcare", description: "Implementing the Gale-Shapley algorithm to match nurses, doctors and patients to each other" })
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-3" },
+                                _react2.default.createElement(_RightBanner2.default, null)
+                            )
+                        )
+                    );
+                case "data":
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "container" },
+                        _react2.default.createElement(_NavBar2.default, { navigate: this.navigate.bind(this) }),
+                        _react2.default.createElement(_Title2.default, { text: "Submit a Request for Data" }),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-3" },
+                                _react2.default.createElement(_LeftBanner2.default, null)
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-6" },
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    "Feel free to request any data from any of our projects. Once you submit a request, we will process it and get back to you soon"
+                                ),
+                                _react2.default.createElement(_Form2.default, null)
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-md-3" },
+                                _react2.default.createElement(_RightBanner2.default, null)
+                            )
+                        )
+                    );
+
             }
         }
     }]);

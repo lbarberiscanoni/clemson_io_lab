@@ -6,6 +6,9 @@ import Student from "./Student";
 import LeftBanner from "./LeftBanner";
 import RightBanner from "./RightBanner";
 import NavBar from "./NavBar";
+import Widget from "./Widget";
+import Form from "./Form";
+import Collaborator from "./Collaborator";
 
 class Hello extends React.Component {
     constructor(props) {
@@ -56,6 +59,19 @@ class Hello extends React.Component {
                             <div className="col-md-3">
                                 <RightBanner />
                             </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-1"></div>
+                            <div className="col-md-3">
+                                <h3>Our Blog</h3>
+                            </div>
+                            <div className="col-md-4">
+                                <h3>Papers We are Reading</h3>
+                            </div>
+                            <div className="col-md-3">
+                                <h3>Our YouTube Channel</h3>
+                            </div>
+                            <div className="col-md-1"></div>
                         </div>
                     </div>
                 )
@@ -141,6 +157,45 @@ class Hello extends React.Component {
                         </div>
                     </div>
                 )
+            case "collaborators":
+                return(        
+                    <div className="container">
+                        <NavBar navigate={ this.navigate.bind(this) }/>
+                        <Title text="Collaborators and Affiliate Researchers" />
+                        <div className="row">
+                            <div className="col-md-3">
+                                <LeftBanner />
+                            </div>
+                            <div className="col-md-6">
+                                <p>We love to collaborate with other hard working and smart people who are researching impactful problems in human factors, industrial psychology, and industrial organizations</p>
+                                <Collaborator author="Lorenzo Barberis Canonico" projectName="Stable Marriages in Healthcare" description="Implementing the Gale-Shapley algorithm to match nurses, doctors and patients to each other" />
+                            </div>
+                            <div className="col-md-3">
+                                <RightBanner />
+                            </div>
+                        </div>
+                    </div>
+                )
+            case "data":
+                return(        
+                    <div className="container">
+                        <NavBar navigate={ this.navigate.bind(this) }/>
+                        <Title text="Submit a Request for Data" />
+                        <div className="row">
+                            <div className="col-md-3">
+                                <LeftBanner />
+                            </div>
+                            <div className="col-md-6">
+                                <p>Feel free to request any data from any of our projects. Once you submit a request, we will process it and get back to you soon</p>
+                                <Form />
+                            </div>
+                            <div className="col-md-3">
+                                <RightBanner />
+                            </div>
+                        </div>
+                    </div>
+                )
+
         }
     }
 }

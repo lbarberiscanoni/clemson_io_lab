@@ -14,10 +14,6 @@ var _reactDom = require("react-dom");
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Widget = require("./Widget");
-
-var _Widget2 = _interopRequireDefault(_Widget);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,27 +22,49 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LeftBanner = function (_React$Component) {
-    _inherits(LeftBanner, _React$Component);
+var Form = function (_React$Component) {
+    _inherits(Form, _React$Component);
 
-    function LeftBanner(props) {
-        _classCallCheck(this, LeftBanner);
+    function Form(props) {
+        _classCallCheck(this, Form);
 
-        return _possibleConstructorReturn(this, (LeftBanner.__proto__ || Object.getPrototypeOf(LeftBanner)).call(this, props));
+        return _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
     }
 
-    _createClass(LeftBanner, [{
+    _createClass(Form, [{
         key: "render",
         value: function render() {
+            var parameters = ["Name", "Email", "Request"];
+            var components = [];
+            parameters.map(function (x) {
+                components.push(_react2.default.createElement(
+                    "div",
+                    { className: "form-group" },
+                    _react2.default.createElement(
+                        "label",
+                        null,
+                        " ",
+                        x,
+                        " "
+                    ),
+                    _react2.default.createElement("input", { className: "form-control" })
+                ));
+            });
+
             return _react2.default.createElement(
-                "div",
+                "form",
                 null,
-                _react2.default.createElement(_Widget2.default, null)
+                components,
+                _react2.default.createElement(
+                    "button",
+                    { className: "btn btn-primary" },
+                    "Submit Request"
+                )
             );
         }
     }]);
 
-    return LeftBanner;
+    return Form;
 }(_react2.default.Component);
 
-exports.default = LeftBanner;
+exports.default = Form;

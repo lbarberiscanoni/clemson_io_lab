@@ -22,66 +22,51 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var RightBanner = function (_React$Component) {
-    _inherits(RightBanner, _React$Component);
+var Collaborator = function (_React$Component) {
+    _inherits(Collaborator, _React$Component);
 
-    function RightBanner(props) {
-        _classCallCheck(this, RightBanner);
+    function Collaborator(props) {
+        _classCallCheck(this, Collaborator);
 
-        return _possibleConstructorReturn(this, (RightBanner.__proto__ || Object.getPrototypeOf(RightBanner)).call(this, props));
+        return _possibleConstructorReturn(this, (Collaborator.__proto__ || Object.getPrototypeOf(Collaborator)).call(this, props));
     }
 
-    _createClass(RightBanner, [{
+    _createClass(Collaborator, [{
         key: "render",
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                null,
+                { className: "panel panel-default" },
                 _react2.default.createElement(
-                    "h2",
-                    null,
-                    "Fall 2018 News"
-                ),
-                _react2.default.createElement(
-                    "p",
-                    null,
-                    "Dr. Shuffler will be accepting MS and PhD students for the Fall of 2018."
-                ),
-                _react2.default.createElement(
-                    "p",
-                    null,
-                    "If you have questions about program admission requirements, please visit the ",
-                    _react2.default.createElement(
-                        "a",
-                        { href: "https://www.clemson.edu/cbshs/departments/psychology/" },
-                        " Clemson Psychology Department website "
-                    ),
-                    " for more details."
-                ),
-                _react2.default.createElement(
-                    "a",
-                    { href: "mailto:mshuffl@clemson.edu", className: "text-primary" },
-                    "mshuffl@clemson.edu"
-                ),
-                _react2.default.createElement(
-                    "a",
-                    { href: "http://newsstand.clemson.edu/mediarelations/psychology-researcher-to-use-grant-to-improve-teamwork-across-disciplines/", target: "_blank" },
+                    "div",
+                    { className: "panel-heading" },
                     _react2.default.createElement(
                         "h3",
                         null,
-                        "NSF CAREER Grant Awarded to DIGITAL Lab!"
+                        " ",
+                        this.props.projectName,
+                        " "
+                    ),
+                    _react2.default.createElement(
+                        "h3",
+                        { className: "panel-title" },
+                        " ",
+                        this.props.author,
+                        " "
                     )
                 ),
                 _react2.default.createElement(
                     "div",
-                    { className: "embed-responsive embed-responsive-4by3" },
-                    _react2.default.createElement("iframe", { className: "embed-responsive-item", src: "assets/research_rock_stars.mp4" })
+                    { className: "panel-body" },
+                    " ",
+                    this.props.description,
+                    " "
                 )
             );
         }
     }]);
 
-    return RightBanner;
+    return Collaborator;
 }(_react2.default.Component);
 
-exports.default = RightBanner;
+exports.default = Collaborator;
